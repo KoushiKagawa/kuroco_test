@@ -45,6 +45,7 @@ jobs:
         env:
           webhook_url: "https://kagawa.g.kuroco.app/direct/menu/github/"
           webhook_secret: "9b0b996a85daf6ef25f0932b7f663c24"
+          BASE_URL: "https://kagawa.g.kuroco.app"
           data: '{"domain":"kagawa.g.kuroco-front.app","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ steps.get_branch.outputs.sha }}"}'
           
   #for Push
