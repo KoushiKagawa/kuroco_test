@@ -10,8 +10,6 @@
 export default {
     async asyncData ({ $axios }) {
         try {
-            //const response = await $axios.$get(process.env.BASE_URL + '/rcms-api/1/blogs')
-            //const response = await $axios.$get('https://kagawa.g.kuroco.app/rcms-api/1/blogs')
             const response = await $axios.$get(process.env.ROOT_MNG_URL + '/rcms-api/1/blogs')
             return { response }
         }catch (e) {
