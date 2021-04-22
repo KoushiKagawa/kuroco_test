@@ -1,3 +1,6 @@
+require('dotenv').config();
+const { BASE_URL } = process.env;
+
 module.exports = {
   /*
   ** Headers of the page
@@ -34,6 +37,12 @@ module.exports = {
         })
       }
     }
+  },
+  modules: [
+    '@nuxtjs/axios'
+  ],
+  env: {
+    BASE_URL
   }
 }
 
