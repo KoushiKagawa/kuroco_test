@@ -38,9 +38,13 @@ module.exports = {
       }
     }
   },
+  css: [
+    '@/assets/scss/app.scss'
+  ],
   modules: [
     '@nuxtjs/axios',
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    'bootstrap-vue/nuxt',
   ],
   env: {
     BASE_URL

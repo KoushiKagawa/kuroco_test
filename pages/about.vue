@@ -1,5 +1,9 @@
 <template>
+
   <section class="container">
+    <Navbar />
+    <h1 class="h1">Nuxt Bootstrap</h1>
+    <b-button variant="primary">Primary Button</b-button>
     <div>
       <h1>test</h1>
       <h2>test</h2>
@@ -7,58 +11,22 @@
       <h4>test</h4>
       <h5>test</h5>
     </div>
-    <template>
-      <v-container>
-        <v-row justify="center">
-          <v-col cols="6">
-            <v-card>
-              <v-card-title>Hello, Vuetify!</v-card-title>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-container>
-    </template>
   </section>
 </template>
 
 <script>
 import AppLogo from '~/components/AppLogo.vue'
+import Navbar from '~/components/Navbar.vue'
 
 export default {
   components: {
-    AppLogo
+    AppLogo,
+    Navbar
   }
 }
 </script>
 
 <style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
 
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
 </style>
 

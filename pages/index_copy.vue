@@ -1,26 +1,22 @@
 <template>
   <section class="container">
     <div>
+      <app-logo/>
       <h1 class="title">
-        KoushiKagawa.com
+        kuroco_test
       </h1>
+      <h2 class="subtitle">
+        Nuxt.js project
+      </h2>
       <div class="links">
         <a
-          href="https://twitter.com/koushikagawa"
+          href="https://nuxtjs.org/"
           target="_blank"
-          class="button--grey">Twitter</a>
+          class="button--green">Documentation</a>
         <a
-          href="https://note.com/koushikagawa"
-          target="_blank"
-          class="button--grey">note</a>
-        <a
-          href="https://github.com/KoushiKagawa"
+          href="https://github.com/nuxt/nuxt.js"
           target="_blank"
           class="button--grey">GitHub</a>
-        <a
-          href="https://www.linkedin.com/in/koushikagawa/"
-          target="_blank"
-          class="button--grey">LinkedIn</a>
       </div>
     </div>
   </section>
