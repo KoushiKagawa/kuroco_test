@@ -23,25 +23,6 @@
           target="_blank"
           class="button--grey">LinkedIn</a>
       </div>
-      <div class="links">
-      <p>for English</p>
-        <a
-          href="https://twitter.com/koshikagawa"
-          target="_blank"
-          class="button--grey">Twitter</a>
-        <a
-          href="https://koshikagawa.medium.com"
-          target="_blank"
-          class="button--grey">Medium</a>
-        <a
-          href="https://github.com/KoushiKagawa"
-          target="_blank"
-          class="button--grey">GitHub</a>
-        <a
-          href="https://www.linkedin.com/in/koushikagawa/"
-          target="_blank"
-          class="button--grey">LinkedIn</a>
-      </div>
     </div>
   </section>
 </template>
