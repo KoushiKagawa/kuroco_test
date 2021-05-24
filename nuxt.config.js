@@ -1,5 +1,7 @@
 require('dotenv').config();
-const { BASE_URL } = process.env;
+//const { BASE_URL } = process.env;
+const { ROOT_MNG_URL } = process.env;
+
 
 module.exports = {
   /*
@@ -45,9 +47,11 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/vuetify',
     'bootstrap-vue/nuxt',
+    ['@nuxtjs/google-analytics', {id: 'UA-197463870-1'}]
   ],
   env: {
-    BASE_URL
+    //BASE_URL
+    ROOT_MNG_URL
   }
 }
 
