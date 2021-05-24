@@ -23,6 +23,11 @@
           target="_blank"
           class="button--grey">LinkedIn</a>
       </div>
+      <div class="links">
+        <a
+          href="/blogs"
+          class="button--grey">Blog</a>
+      </div>
     </div>
   </section>
 </template>

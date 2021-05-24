@@ -1,5 +1,4 @@
 require('dotenv').config();
-//const { BASE_URL } = process.env;
 const { ROOT_MNG_URL } = process.env;
 
 
