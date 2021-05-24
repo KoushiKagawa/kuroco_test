@@ -46,16 +46,11 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/vuetify',
     'bootstrap-vue/nuxt',
-    /*
-    ['@nuxtjs/google-analytics', {
-      id: 'UA-197463870-1'
-      }]
-      */
     '@nuxtjs/google-gtag'
   ],
   'google-gtag': {
-    id: 'UA-197463870-1',  //サイトのID
-    debug: true,  // 開発環境でも表示したい場合
+    id: 'UA-197463870-1',
+    //debug: true, 
   },
   env: {
     //BASE_URL
