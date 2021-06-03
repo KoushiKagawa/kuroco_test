@@ -2,6 +2,7 @@
     <div>
       <h1 class="title">{{ response.details.subject }}</h1>
       <div class="post" v-html="response.details.contents"></div>
+      <div class="post" v-html="response.details.ext_col_02.url"></div>
     </div>
 </template>
 
