@@ -46,7 +46,8 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/vuetify',
     'bootstrap-vue/nuxt',
-    '@nuxtjs/google-gtag'
+    '@nuxtjs/google-gtag',
+    '@nuxtjs/tailwindcss',
   ],
   'google-gtag': {
     id: 'UA-197463870-1',
