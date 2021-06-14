@@ -2,6 +2,17 @@
     <div>
       <h1 class="title">{{ response.details.subject }}</h1>
       <div class="post" v-html="response.details.contents"></div>
+
+      ## firebase
+         <iframe
+        :src="response.details.ext_col_02.url"
+        width="640"
+        height="360"
+        frameborder="0"
+        allowfullscreen
+    ></iframe>
+
+        ## Vimeo
       <iframe
         :src="response.details.ext_col_03.url"
         width="640"
