@@ -27,6 +27,9 @@
         <a
           href="/blogs"
           class="button--grey">Blog</a>
+          <a
+          href="/form"
+          class="button--grey">Contact</a>
       </div>
     </div>
   </section>
