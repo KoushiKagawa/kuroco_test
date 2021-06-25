@@ -24,7 +24,6 @@
     ## 画像
     {{ response.details.ext_col_01.url }}
 
-    <img src="https://kagawa.g.kuroco-img.app/v=1623906367/files/topics/959_ext_01_0.png">
     <img :src="response.details.ext_col_01.url">
     
 
