@@ -17,7 +17,7 @@ jobs:
       - name: "Get branch name and sha"
         id: get_branch
         run: |
-          PR=$(curl -H "Authorization: token 9b0b996a85daf6ef25f0932b7f663c24" https://kagawa.g.kuroco.app/direct/menu/github/?pr=${{ github.event.issue.pull_request.url }})
+          PR=$(curl -H "Authorization: token 7c3e23fa9356025c387247c740a293e4" https://kagawa.g.kuroco.app/direct/menu/github/?pr=${{ github.event.issue.pull_request.url }})
           echo "::set-output name=branch::$(echo $PR | jq -r '.ref')"
           echo "::set-output name=sha::$(echo $PR | jq -r '.sha')"
       - name: Checkout Repo
@@ -44,8 +44,8 @@ jobs:
         uses: distributhor/workflow-webhook@v1
         env:
           webhook_url: "https://kagawa.g.kuroco.app/direct/menu/github/"
-          webhook_secret: "9b0b996a85daf6ef25f0932b7f663c24"
-          data: '{"domain":"kagawa.g.kuroco-front.app","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ steps.get_branch.outputs.sha }}"}'
+          webhook_secret: "7c3e23fa9356025c387247c740a293e4"
+          data: '{"domain":"koushikagawa.com","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ steps.get_branch.outputs.sha }}"}'
           
   #for Push
   pushed_build:
@@ -75,5 +75,5 @@ jobs:
         uses: distributhor/workflow-webhook@v1
         env:
           webhook_url: "https://kagawa.g.kuroco.app/direct/menu/github/"
-          webhook_secret: "9b0b996a85daf6ef25f0932b7f663c24"
-          data: '{"domain":"kagawa.g.kuroco-front.app", "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ github.sha }}"}'
+          webhook_secret: "7c3e23fa9356025c387247c740a293e4"
+          data: '{"domain":"koushikagawa.com", "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ github.sha }}"}'

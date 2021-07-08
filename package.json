@@ -20,6 +20,7 @@
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
     "nuxt": "^2.0.0",
+    "skyway-js": "^4.4.1",
     "vue": "^2.6.12"
   },
   "devDependencies": {
