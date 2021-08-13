@@ -48,6 +48,7 @@ module.exports = {
     'bootstrap-vue/nuxt',
     '@nuxtjs/google-gtag',
     '@nuxtjs/tailwindcss',
+    '@nuxt/content'
   ],
   'google-gtag': {
     id: 'UA-197463870-1',

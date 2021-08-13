@@ -26,6 +26,8 @@
 
     <img :src="response.details.ext_col_01.url">
     
+    ## file  
+    {{ response.details.ext_col_05.dl_link }}
 
     </div>
 
