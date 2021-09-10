@@ -3,7 +3,7 @@
   <div class="frame-root">
     <div class="frame-content">
       <!-- header -->
-      <Navbar/>
+
 
       <!-- main -->
       <section class="text-gray-600 body-font">
@@ -28,12 +28,9 @@
 </template>
 
 <script>
-import Navbar from '~/components/Navbar.vue'
 
 export default {
-  components: {
-    Navbar
-  },
+
   /*
     async asyncData ({ $axios }) {
         try {
