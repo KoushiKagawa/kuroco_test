@@ -1,0 +1,34 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.content h1 {
+  @apply my-10;
+}
+.content h2 {
+  @apply text-3xl my-8;
+}
+.content h3 {
+  @apply text-2xl my-6;
+}
+.content h4 {
+  @apply text-xl my-4;
+}
+.content {
+  @apply my-4;
+}
+.content p {
+  @apply leading-relaxed text-lg;
+}
+.content a {
+  @apply underline;
+}
+.content ul {
+  @apply m-3;
+}
+.content li {
+  @apply list-disc;
+}
+.content img {
+  @apply my-8 rounded-md;
+}

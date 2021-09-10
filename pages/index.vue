@@ -10,7 +10,7 @@
         <div class="container px-5 py-24 mx-auto">
           <div>
             <h1 class="inline-block text-3xl font-extrabold text-gray-900 tracking-tight">
-              KoushiKagawa.com
+              Hi! KoushiKagawa.com
             </h1>
             <div class="links">
               <p>for Japanese</p>
