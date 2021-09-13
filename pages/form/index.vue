@@ -1,86 +1,102 @@
 <template>
-  <div>
-    <h1>FORMページ</h1>
-
-    <form v-if="!submitted" ref="form">
-      <div v-if="error" class="error">
-        <p v-for="(err, idx) in error" :key="idx">
-          {{ err }}
-        </p>
-      </div>
-
-      <div class="row--status">
-        <h2>フォーム名</h2>
-        <div>{{ name }}</div>
-      </div>
-
-      <div class="row--status">
-        <h2>説明</h2>
-        <div>
-          <p v-for="(line, idx) in textLines2texts(info)" :key="idx">
-            {{ line }}
-          </p>
-        </div>
-      </div>
-
-      <div class="row--status">
-        <h2>サンクス文言</h2>
-        <div>
-          <p v-for="(line, idx) in textLines2texts(thanksText)" :key="idx">
-            {{ line }}
-          </p>
-        </div>
-      </div>
-
-      <div class="row--status">
-        <h2>フォーム項目</h2>
-        <div class="row--internal">
-          <div v-for="col in cols" :key="col.key">
-            <p>[{{ col.title }}]</p>
-            <pre>{{ col }}</pre>
-          </div>
-        </div>
-      </div>
-
-      <div v-for="col in cols" :key="col.objKey" class="row--form">
-        <h2>[{{ col.title }}]</h2>
-        <input :name="col.objKey" type="text" />
-      </div>
-
-      <div class="row--bottom-next">
-        <button @click="handleOnSubmit">submit</button>
-      </div>
-    </form>
-
-    <form v-else>
-      <div class="row--status">
-        <h2>問い合わせID</h2>
-        <div>
-          {{ submittedId }}
-        </div>
-      </div>
-
-      <div class="row--status">
-        <h2>サンクス文言</h2>
-        <div>
-          <p v-for="(line, idx) in textLines2texts(thanksText)" :key="idx">
-            {{ line }}
-          </p>
-        </div>
-      </div>
-
-      <div class="row--bottom-back">
-        <button @click="handleOnBack">back</button>
-      </div>
-    </form>
-  </div>
+    <div>
+        <Nav /> 
+        <main>
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-3xl xl:px-0 m-4">  
+                <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl md:text-[4rem] md:leading-[3.5rem] leading-10">Contact me</h1>
+                <div>
+                    <div class="row--status">
+                        <h2>{{ name }}</h2>
+                    </div>
+<form>
+            <div class="mb-6">
+              <label
+                for="name"
+                class="block mb-2 text-sm text-gray-600"
+              >
+                お名前
+                <span class="text-xs text-red-500">(必須)</span>
+              </label>
+              <input
+                id="name"
+                type="text"
+                name="name"
+                placeholder="お名前太郎"
+                class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+              />
+            </div>
+            <div class="mb-6">
+              <label
+                for="email"
+                class="block mb-2 text-sm text-gray-600"
+              >
+                メールアドレス
+                <span class="text-xs text-red-500">(必須)</span>
+              </label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="your@example.com"
+                class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+              />
+            </div>
+            <div class="mb-6">
+              <label
+                for="phone"
+                class="text-sm text-gray-600"
+              >
+                電話番号
+              </label>
+              <input
+                id="phone"
+                type="text"
+                name="phone"
+                placeholder="0312345678"
+                class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+              />
+            </div>
+            <div class="mb-6">
+              <label
+                for="message"
+                class="block mb-2 text-sm text-gray-600"
+              >
+                内容
+                <span class="text-xs text-red-500">(必須)</span>
+              </label>
+              <textarea
+                id="message"
+                rows="5"
+                name="message"
+                placeholder="お問い合わせ内容です"
+                class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+              >
+              </textarea>
+            </div>
+            <div class="mb-6">
+              <button
+                @click="handleOnSubmit"
+                class="w-full px-3 py-4 font-bold text-white bg-green-500 rounded-md focus:bg-green-600 focus:outline-none"
+              >
+                送信する
+              </button>
+            </div>
+          </form>
+                </div>
+            </div>
+        </main>
+    </div>
 </template>
-
 <script>
-const FORM_ID = 7 // 作成したフォーム定義のID
+import Nav from "@/components/Nav.vue";
+
+const FORM_ID = 6 // 作成したフォーム定義のID
 
 export default {
-  async asyncData({ $axios }) {
+    components: {
+		Nav
+	},
+async asyncData({ $axios }) {
     const response = await $axios.$get(
       process.env.ROOT_MNG_URL + `/rcms-api/1/form/${FORM_ID}`
     )
@@ -138,58 +154,3 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-input {
-  width: 100%;
-  border: none;
-}
-
-.error {
-  color: red;
-}
-.error > *:first-child {
-  font-weight: bold;
-}
-
-.row--status {
-  display: flex;
-  border-top: 1px solid black;
-}
-.row--status > *:first-child {
-  background-color: yellow;
-  min-width: 15rem;
-  max-width: 15rem;
-  border-right: 1px solid black;
-}
-
-.row--form {
-  display: flex;
-  border-top: 1px solid black;
-}
-.row--form > *:first-child {
-  background-color: aquamarine;
-  min-width: 15rem;
-  max-width: 15rem;
-  border-right: 1px solid black;
-}
-
-.row--bottom-next {
-  padding: 8px 16px;
-  display: flex;
-  justify-content: flex-end;
-}
-.row--bottom-back {
-  padding: 8px 16px;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.row--internal {
-  display: flex;
-}
-
-form > *:nth-last-child(2) {
-  border-bottom: 1px solid black;
-}
-</style>

@@ -10,10 +10,15 @@
     </div>
 </template>
 <script>
+import Nav from "@/components/Nav.vue";
+
 export default {
- async asyncData ({ $content, params }) {
-   const about = await $content('about', params.slug || 'index').fetch()
-   return { about }
- }
+    components: {
+		Nav
+	},
+    async asyncData ({ $content, params }) {
+        const about = await $content('about', params.slug || 'index').fetch()
+        return { about }
+    }
 }
 </script>
