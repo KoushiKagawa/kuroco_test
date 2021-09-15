@@ -2,11 +2,11 @@ name: Build and deploy to Kuroco front
 on:
   push:
     branches:
-      - develop
+      - main
   issue_comment:
     types: [created, edited]
   workflow_dispatch:
-    branches: [ develop ]
+    branches: [ main ]
 jobs:
   # for Pull Request (exclude merged)
   pullreq_build:
@@ -47,7 +47,7 @@ jobs:
         env:
           webhook_url: "https://kagawa.g.kuroco.app/direct/menu/github/"
           webhook_secret: "7c3e23fa9356025c387247c740a293e4"
-          data: '{"domain":"kagawa.g.kuroco-front.app","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ steps.get_branch.outputs.sha }}"}'
+          data: '{"domain":"koushikagawa.com","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ steps.get_branch.outputs.sha }}"}'
           
   #for Push
   pushed_build:
@@ -78,4 +78,4 @@ jobs:
         env:
           webhook_url: "https://kagawa.g.kuroco.app/direct/menu/github/"
           webhook_secret: "7c3e23fa9356025c387247c740a293e4"
-          data: '{"domain":"kagawa.g.kuroco-front.app", "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ github.sha }}"}'
+          data: '{"domain":"koushikagawa.com", "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ github.sha }}"}'
