@@ -1,45 +1,26 @@
 <template>
     <div>
-      <h1 class="title">{{ response.details.subject }}</h1>
-      <div class="post" v-html="response.details.contents"></div>
-
-      ## firebase
-    <iframe
-        :src="response.details.ext_col_02.url"
-        width="640"
-        height="360"
-        frameborder="0"
-        allowfullscreen
-    ></iframe>
-
-        ## Vimeo
-      <iframe
-        :src="response.details.ext_col_03.url"
-        width="640"
-        height="360"
-        frameborder="0"
-        allowfullscreen
-    ></iframe>
-    
-    ## 画像
-    {{ response.details.ext_col_01.url }}
-
-    <img :src="response.details.ext_col_01.url">
-    
-    ## file  
-    {{ response.details.ext_col_05.dl_link }}
-
+        <Nav /> 
+        <main class="content">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-3xl xl:px-0 m-4">  
+                <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl md:text-[4rem] md:leading-[3.5rem] leading-10">{{ response.details.subject }}</h1>
+                <img class="object-cover w-full h-full my-4 rounded-md" :src="response.details.ext_col_01.url">
+                <div v-html="response.details.contents"></div>
+            </div>
+        </main>
     </div>
-
-    
-    
 </template>
 
 <script>
+import Nav from "@/components/Nav.vue";
+
 export default {
+    components: {
+			Nav
+	},
     async asyncData ({ $axios, params }) {
         try {
-            const response = await $axios.$get(process.env.ROOT_MNG_URL + '/rcms-api/1/blogdetail/' + `${params.slug}`)
+            const response = await $axios.$get(process.env.ROOT_MNG_URL + '/rcms-api/1/enblogdetail/' + `${params.slug}`)
             console.log(response);
             return { response }
         }catch (e) {
