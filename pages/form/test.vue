@@ -71,6 +71,15 @@
 
       <div class="row--bottom-back">
         <button @click="handleOnBack">back</button>
+        <!--
+        <button 
+        @click="handleOnBack"
+        class="g-recaptcha" 
+        data-sitekey="6Lf0pMwcAAAAACGnNa6nqBVATAudJT0VJki6kHP-" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
+        -->
+
       </div>
     </form>
   </div>
@@ -85,6 +94,7 @@ export default {
       script: [
         {
           src: "https://www.google.com/recaptcha/api.js?render=6Lf0pMwcAAAAACGnNa6nqBVATAudJT0VJki6kHP-"
+          //src: "https://www.google.com/recaptcha/api.js"
         }
       ]
     }
@@ -146,6 +156,16 @@ export default {
       e.preventDefault()
       this.submitted = false
     },
+    
+onClick(e) {
+        e.preventDefault();
+        grecaptcha.ready(function() {
+          grecaptcha.execute('6Lf0pMwcAAAAACGnNa6nqBVATAudJT0VJki6kHP-', {action: 'submit'}).then(function(token) {
+              // Add your logic to submit to your backend server here.
+          });
+        });
+  },
+
   },
 }
 </script>
@@ -202,5 +222,10 @@ input {
 
 form > *:nth-last-child(2) {
   border-bottom: 1px solid black;
+}
+
+
+button {
+    margin: 100px;
 }
 </style>
