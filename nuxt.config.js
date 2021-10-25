@@ -1,6 +1,6 @@
 require('dotenv').config();
 const { ROOT_MNG_URL } = process.env;
-
+const { ROOT_API_URL } = process.env;
 
 module.exports = {
   /*
@@ -55,22 +55,23 @@ module.exports = {
     '@nuxtjs/google-gtag',
     '@nuxtjs/tailwindcss',
     '@nuxt/content',
-//    '@nuxtjs/recaptcha'
+    '@nuxtjs/recaptcha'
   ],
-  /*
+  
   recaptcha: {
     hideBadge: true,
     siteKey: '6Lf0pMwcAAAAACGnNa6nqBVATAudJT0VJki6kHP-',
     version: 3
   },
-  */
+  
   'google-gtag': {
     id: 'UA-197463870-1',
     //debug: true, 
   },
   env: {
     //BASE_URL
-    ROOT_MNG_URL
+    ROOT_MNG_URL,
+    ROOT_API_URL
   }
 }
 

@@ -93,6 +93,7 @@ export default {
   async asyncData({ $axios }) {
     const response = await $axios.$get(
       process.env.ROOT_API_URL + `/rcms-api/1/form/${FORM_ID}`
+      //`https://kagawa.g.kuroco.app/rcms-api/1/form/${FORM_ID}`
     )
     return {
       name: response.details.inquiry_name,
