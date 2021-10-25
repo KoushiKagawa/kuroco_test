@@ -55,13 +55,15 @@ module.exports = {
     '@nuxtjs/google-gtag',
     '@nuxtjs/tailwindcss',
     '@nuxt/content',
-    '@nuxtjs/recaptcha'
+//    '@nuxtjs/recaptcha'
   ],
+  /*
   recaptcha: {
     hideBadge: true,
     siteKey: '6Lf0pMwcAAAAACGnNa6nqBVATAudJT0VJki6kHP-',
     version: 3
   },
+  */
   'google-gtag': {
     id: 'UA-197463870-1',
     //debug: true, 
