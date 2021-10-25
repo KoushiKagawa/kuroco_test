@@ -82,8 +82,9 @@
               </button>
             </div>
           </form>
-                </div>
+
             </div>
+          </div>
         </main>
     </div>
 </template>
@@ -93,9 +94,44 @@ import Nav from "@/components/Nav.vue";
 const FORM_ID = 6 // 作成したフォーム定義のID
 
 export default {
+
+    head() {
+    return {
+      script: [
+        {
+          src: "https://www.google.com/recaptcha/api.js?render=6Lf0pMwcAAAAACGnNa6nqBVATAudJT0VJki6kHP-"
+        }
+      ]
+    }
+  },
     components: {
-		Nav
-	},
+		Nav,
+  
+  },
+
+async mounted() {
+  try {
+    await this.$recaptcha.init()
+  } catch (e) {
+    console.error(e);
+  }
+},
+async onSubmit() {
+  try {
+    const token = await this.$recaptcha.execute('login')
+    console.log('ReCaptcha token:', token)
+
+    // send token to server alongside your form data
+
+  } catch (error) {
+    console.log('Login error:', error)
+  }
+},
+beforeDestroy() {
+  this.$recaptcha.destroy()
+},
+
+
 async asyncData({ $axios }) {
     const response = await $axios.$get(
       process.env.ROOT_MNG_URL + `/rcms-api/1/form/${FORM_ID}`

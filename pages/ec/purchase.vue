@@ -65,13 +65,13 @@ export default {
     async asyncData ({ $axios, params }) {
         try {
             //const profile = await $axios.$get('/profile')
-            const profile = await this.$axios.$get(process.env.ROOT_MNG_URL + '/profile')
+            const profile = await this.$axios.$get(process.env.ROOT_MNG_URL + '/rcms-api/7/profile')
             let cartItems = {
                 details: null
             }
             let orderer = {}
             if (profile.ec_cart_id) {
-                cartItems = await $axios.$get(process.env.ROOT_MNG_URL + '/cart-items/' + profile.ec_cart_id)
+                cartItems = await $axios.$get(process.env.ROOT_MNG_URL + '/rcms-api/7/cart-items/' + profile.ec_cart_id)
                 orderer.name1 = profile.name1
                 orderer.name2 = profile.name2
                 orderer.zip_code = profile.zip_code
@@ -102,7 +102,7 @@ export default {
                 alert('Please select payment')
                 return
             }
-            const profile = await this.$axios.$get(process.env.ROOT_MNG_URL + '/profile')
+            const profile = await this.$axios.$get(process.env.ROOT_MNG_URL + '/rcms-api/7/profile')
             if (!profile.ec_cart_id) {
                 alert('No loggedin')
                 return
@@ -112,7 +112,7 @@ export default {
                 ec_payment_id: parseInt(this.paymentId),
                 orderer: this.orderer
             }
-            this.$axios.$post(process.env.ROOT_MNG_URL + '/purchase ', order)
+            this.$axios.$post(process.env.ROOT_MNG_URL + '/rcms-api/7/purchase ', order)
             .then((response) => {
                 if (response.errors.length === 0) {
                     alert('Success purchase')

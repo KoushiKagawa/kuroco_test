@@ -15,7 +15,7 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
   },
   /*
   ** Customize the progress bar color
@@ -54,8 +54,14 @@ module.exports = {
     'bootstrap-vue/nuxt',
     '@nuxtjs/google-gtag',
     '@nuxtjs/tailwindcss',
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/recaptcha'
   ],
+  recaptcha: {
+    hideBadge: true,
+    siteKey: '6Lf0pMwcAAAAACGnNa6nqBVATAudJT0VJki6kHP-',
+    version: 3
+  },
   'google-gtag': {
     id: 'UA-197463870-1',
     //debug: true, 

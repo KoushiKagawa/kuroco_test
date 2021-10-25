@@ -1376,6 +1376,11 @@
   dependencies:
     "http-proxy-middleware" "^1.0.6"
 
+"@nuxtjs/recaptcha@^1.0.4":
+  "integrity" "sha512-4K9cXaVGZrcXy3ys5OBL1/njkOxTpRjLDKLU/S6qatyISdGLv+tSFLSCJeEKTCO7UHC1fMCTb5UlOWajkQqPdw=="
+  "resolved" "https://registry.npmjs.org/@nuxtjs/recaptcha/-/recaptcha-1.0.4.tgz"
+  "version" "1.0.4"
+
 "@nuxtjs/tailwindcss@^4.1.2":
   "integrity" "sha512-Ha8FmzKziQ24og+ivyyN1PM0+PSudPipjSy+OENIFDYS00UOulAIaqfc1qoTmH+P8nDONOzX6fdsj33s2CmB9w=="
   "resolved" "https://registry.npmjs.org/@nuxtjs/tailwindcss/-/tailwindcss-4.1.2.tgz"
