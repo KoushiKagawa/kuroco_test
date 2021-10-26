@@ -3,12 +3,71 @@
         <Nav /> 
         <main>
             <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-3xl xl:px-0 m-4">  
-                <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl md:text-[4rem] md:leading-[3.5rem] leading-10">Contact me</h1>
+                <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl md:text-[4rem] md:leading-[3.5rem] leading-10">{{ name }}</h1>
                 <div>
-                    <div class="row--status">
-                        <h2>{{ name }}</h2>
+                  <form v-if="!submitted" ref="form">
+                    <div class="mb-6">
+                      <div v-if="error" class="error">
+                        <p v-for="(err, idx) in error" :key="idx">
+                          {{ err }}
+                        </p>
+                      </div>
+
+                      <div v-for="col in cols" :key="col.objKey" class="row--form mb-6">
+                        <!--<h2>[{{ col.title }}]</h2>-->
+                        <label
+                          for="name"
+                          class="block mb-2 text-sm text-gray-600"
+                        >
+                          [{{ col.title }}]
+                          <span class="text-xs text-red-500">(必須)</span>
+                        </label>
+                        <input 
+                          :name="col.objKey" 
+                          type="text" 
+                          class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                        />
+                      </div>
+
+                      <div class="mb-6">
+                        <button
+                          @click="handleOnSubmit"
+                          class="w-full px-3 py-4 font-bold text-white bg-green-500 rounded-md focus:bg-green-600 focus:outline-none"
+                        >
+                          送信する
+                        </button>
+                      </div>
                     </div>
-<form>
+                  </form>
+
+                  <form v-else>
+                    <div class="mb-6">
+                      <h2>お問合せありがとうございました。</h2>
+                      <div class="row--status">
+                        <h3>問い合わせID</h3>
+                        <div>
+                          {{ submittedId }}
+                        </div>
+                      </div>
+
+                      <div class="row--status">
+                        <h3>サンクス文言</h3>
+                        <div>
+                          <p v-for="(line, idx) in textLines2texts(thanksText)" :key="idx">
+                            {{ line }}
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row--bottom-back">
+                        <button @click="handleOnBack">back</button>
+                      </div>
+                    </div>
+                  </form>
+
+
+<!--
+            <form>
             <div class="mb-6">
               <label
                 for="name"
@@ -81,8 +140,8 @@
                 送信する
               </button>
             </div>
-          </form>
-
+            </form>
+-->
             </div>
           </div>
         </main>
@@ -91,7 +150,7 @@
 <script>
 import Nav from "@/components/Nav.vue";
 
-const FORM_ID = 7 // 作成したフォーム定義のID
+const FORM_ID = 8 // 作成したフォーム定義のID
 
 export default {
     head() {
