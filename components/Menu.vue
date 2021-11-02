@@ -24,6 +24,7 @@
             <li class="py-2 text-xl"><NuxtLink to="/sample">about</NuxtLink></li>
           </ul>
         -->
+        <!--
         <ul
           v-for="n in response.list"
           :key="n.slug"
@@ -37,6 +38,7 @@
             </NuxtLink>
           </li>
         </ul>
+        -->
       </div>
       <div>
         <h2 class="text-4xl border-b">PROJECT</h2>
