@@ -17,7 +17,7 @@
       </div>
       <div>
         <h2 class="text-4xl border-b">BLOG</h2>
-        <!--
+        <!--  読み込めない
           <ul class="pl-2">
             <li class="py-2 text-xl"><NuxtLink to="/sample">who</NuxtLink></li>
             <li class="py-2 text-xl"><NuxtLink to="/sample">about</NuxtLink></li>

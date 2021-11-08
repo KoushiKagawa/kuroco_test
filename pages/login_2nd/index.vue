@@ -52,7 +52,7 @@ export default {
                     password: this.password
                 }
                 await this.$store.dispatch('login', payload)
- 
+
                 this.loginStatus = 'success'
                 this.resultMessage = 'ログインに成功しました。'
             } catch (e) {

@@ -22,8 +22,9 @@ export const mutations = {
 export const actions = {
     async login ({ commit }, payload) {
         await this.$axios.$post(process.env.ROOT_MNG_URL + '/rcms-api/8/login', payload)
+        //await this.$axios.$post(process.env.BASE_URL + '/rcms-api/8/login', payload)
         
-        const profileRes = await this.$axios.$get(process.env.ROOT_MNG_URL + '/rcms-api/8/profile')
+        const profileRes = await this.$axios.$get(process.env.ROOT_MNG_URL + '/rcms-api/8/login/profile')
         commit('setProfile', { profile: profileRes.data })
         commit('updateLocalStorage', { authenticated: true })
     },
@@ -44,13 +45,13 @@ export const actions = {
 
         if (!authenticated) {
             await dispatch('logout')
-            throw new Error('need to login')
-        }
-        try {
-            const profileRes = await this.$axios.$get(process.env.BASE_URL + '/rcms-api/1/profile')
-            commit('setProfile', { profile: profileRes.data })
-        } catch {
-            await dispatch('logout')
+                        throw new Error('need to login')
+                    }
+                    try {
+                        const profileRes = await this.$axios.$get(process.env.BASE_URL + '/rcms-api/1/profile')
+                        commit('setProfile', { profile: profileRes.data })
+                    } catch {
+                        await dispatch('logout')
             throw new Error('need to login')
         }
     }

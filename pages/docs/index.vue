@@ -34,22 +34,22 @@
   
     <div class="Menu grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 font-sans py-2 px-6 bg-white mt-32">
       <div>
-        <h2 class="text-4xl border-b">ABOUT</h2>
+        <h2 class="text-4xl border-b">💁 ABOUT</h2>
           <ul class="pl-2">
-            <li class="py-2 text-xl"><NuxtLink to="/who">who</NuxtLink></li>
+            <li class="py-2 text-xl"><NuxtLink to="/who">About</NuxtLink></li>
             <li class="py-2 text-xl"><a href="https://twitter.com/koshikagawa">Twitter</a></li>
             <li class="py-2 text-xl"><a href="https://github.com/KoushiKagawa">GitHub</a></li>
           </ul>
       </div>
       <div>
-        <h2 class="text-4xl border-b">WORK</h2>
+        <h2 class="text-4xl border-b">✍️ WORK</h2>
           <ul class="pl-2">
             <li class="py-2 text-xl"><a href="https://kuroco.app/docs/">Kuroco Docs</a></li>
             <li class="py-2 text-xl"><a href="https://www.sweet-bakery.co.jp/">SWEET bakery</a></li>
           </ul>
       </div>
       <div>
-        <h2 class="text-4xl border-b">BLOG</h2>
+        <h2 class="text-4xl border-b">❤️ BLOG</h2>
         <ul
           v-for="n in response.list"
           :key="n.slug"
@@ -66,24 +66,19 @@
         </ul>
       </div>
       <div>
-        <h2 class="text-4xl border-b">for JAPANESE</h2>
+        <h2 class="text-4xl border-b">🗻 for JAPANESE</h2>
           <ul class="pl-2">
-            <li class="py-2 text-xl"><a href="https://koushikagawa.github.io/">who</a></li>
+            <li class="py-2 text-xl"><a href="https://koushikagawa.github.io/">About</a></li>
             <li class="py-2 text-xl"><a href="https://note.com/koushikagawa/">note</a></li>
-            <li class="py-2 text-xl"><a href="https://twitter.com/koushikagawa">twitter</a></li>
+            <li class="py-2 text-xl"><a href="https://twitter.com/koushikagawa">Twitter</a></li>
           </ul>
       </div>
     </div>
-
-<!--        
-    <Menu /> 
--->
 
     <div class="Description font-sans flex flex-col sm:flex-row py-2 px-6 bg-white sm:items-end">
       This site is build Nuxt.js, tailwindcss, Kuroco
     </div>
 
-    <!--<div class="Footer font-sans flex flex-col sm:flex-row py-2 px-6 bg-white sm:items-end">-->
     <div class="Footer font-sans py-2 px-6 bg-white sm:items-end">
       <footer>
         © 2021 Copyright koushikagawa.com All rights reserved.
