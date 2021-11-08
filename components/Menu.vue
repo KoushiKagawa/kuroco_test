@@ -12,7 +12,7 @@
           <ul class="pl-2">
             <li class="py-2 text-xl"><NuxtLink to="/sample">who</NuxtLink></li>
             <li class="py-2 text-xl"><NuxtLink to="/sample">about</NuxtLink></li>
-            <li class="py-2 text-xl"><NuxtLink to="/sample">about</NuxtLink></li>
+            <li class="py-2 text-xl"><NuxtLink to="/sample">work2</NuxtLink></li>
           </ul>
       </div>
       <div>
