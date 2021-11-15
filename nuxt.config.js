@@ -57,7 +57,7 @@ module.exports = {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/vuetify',
-    'bootstrap-vue/nuxt',
+    /*'bootstrap-vue/nuxt',*/
     '@nuxtjs/google-gtag',
     '@nuxtjs/tailwindcss',
     '@nuxt/content',

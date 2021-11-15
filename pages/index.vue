@@ -27,7 +27,7 @@
         <h2 class="text-4xl border-b">✍️ WORK</h2>
           <ul class="pl-2">
             <li class="py-2 text-xl"><a href="https://kuroco.app/docs/">Kuroco Docs</a></li>
-            <li class="py-2 text-xl"><a href="https://www.sweet-bakery.co.jp/demo/">Kuroco Tutorials demo</a></li>
+            <li class="py-2 text-xl"><NuxtLink to="/demo/">Kuroco Tutorials</NuxtLink></li>
             <li class="py-2 text-xl"><a href="https://www.sweet-bakery.co.jp/">SWEET bakery</a></li>
           </ul>
       </div>

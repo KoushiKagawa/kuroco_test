@@ -8,7 +8,7 @@
         </div>
         -->
         <div>
-          <a href="/" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark font-sans font-bold">koushikagawa.com</a><br>
+          <a href="/" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark font-sans font-bold">koushikagawa.com</a>
           <!--<span class="text-xs text-grey-dark">Beautiful New Tagline</span>-->
         </div>
       </div>
