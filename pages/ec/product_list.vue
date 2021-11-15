@@ -2,26 +2,37 @@
     <div>
         <div>
         <h2 class="title">Cart items</h2>
-        <ul v-if="cartItems">
-            <span>Delivery free: {{ cartItems.deliv_fee }}</span>
-            <span>Subtotal: {{ cartItems.subtotal }}</span>
-            <span>Total amount: {{ cartItems.total }}</span>
-            <li class="cart-item" v-for="item in cartItems.items" :key="item.product_id">
-                <span class="product_id">ID: {{ item.product_id }}</span>
-                <span class="quantity">Quantity: {{ item.quantity }}</span>
-            </li>
+        <div v-if="cartItems" class="box">
+            <ul>
+                <h3>購入商品</h3>
+                <li class="cart-item" v-for="item in cartItems.items" :key="item.product_id">
+                    <div class="product_id">ID: {{ item.product_id }}</div>
+                    <div class="quantity">購入数: {{ item.quantity }}</div>
+                </li>
+            </ul>
+            <ul>
+                <h3>注文内容</h3>
+                <li>
+                    <div>配送料: {{ cartItems.deliv_fee }}</div>
+                    <div>商品の小計: {{ cartItems.subtotal }}</div>
+                    <div>合計: {{ cartItems.total }}</div>
+                </li>
+            </ul>
             <div>
-                <NuxtLink to="/ec/purchase">Go purchase</NuxtLink>
+                <NuxtLink to="/ec/purchase" class="btn">カートに進む</NuxtLink>
             </div>
-        </ul>
+        
         </div>
-        <div>
+        <div v-else>まだカートにアイテムはありません。</div>
+        </div>
+        <div class="box">
             <h2 class="title">Product list</h2>
-            <ul v-if="productList">
+            <ul v-if="productList" class="ul">
                 <li class="list-item" v-for="item in productList" :key="item.product_id">
-                    <div class="title">{{ item.subject }}</div>
-                    <div class="price">{{ item.price_02 }}</div>
-                    <div class="cart" @click="addCart(item.product_id)">Add cart</div>
+                    <div class="title">商品名：{{ item.subject }}</div>
+                    <div class="title">商品名：{{ item.subject }}</div>
+                    <div class="price">価格：{{ item.price_02 }} 円</div>
+                    <div class="cart btn" @click="addCart(item.product_id)">購入する</div>
                 </li>
             </ul>
         </div>
@@ -79,3 +90,34 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+div.box{
+border: solid 1px #ddd;
+border-radius :8px;
+padding: 10px;
+margin:10px;
+}
+
+li {
+  border-radius :8px;
+  box-shadow :0px 0px 5px silver;
+  padding: 0.5em 0.5em 0.5em 2em;
+  margin: 20px;
+}
+
+.btn,
+a.btn {
+  color: #fff;
+  background-color: #fd9535;
+}
+.btn:hover,
+a.btn:hover {
+  color: #fff;
+  background: #fd9535;
+}
+
+a.btn--radius {
+   border-radius: 100vh;
+}
+</style>
