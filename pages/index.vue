@@ -77,7 +77,8 @@ export default {
   async asyncData({ $axios }) {
     try {
       const response = await $axios.$get(
-        process.env.ROOT_MNG_URL + '/rcms-api/1/enbloglist'
+        //process.env.ROOT_MNG_URL + '/rcms-api/1/enbloglist'
+        '/rcms-api/1/enbloglist'
       )
             
       return { response }
