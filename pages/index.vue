@@ -9,7 +9,7 @@
       </div>
       <div class="Copy_img flex-auto">
         <picture>
-          <source src="@/assets/images/heatghost.webp" class="w-96 self-center mt-6 rounded-lg" type="image/webp">
+          <source srcset="@/assets/images/heatghost.webp" class="w-96 self-center mt-6 rounded-lg" type="image/webp">
           <img src="@/assets/images/heatghost.png" alt="heatghost" class="w-96 self-center mt-6 rounded-lg">
         </picture>
       </div>
