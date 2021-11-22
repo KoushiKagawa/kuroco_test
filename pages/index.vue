@@ -8,7 +8,10 @@
         <h1 class="text-5xl leading-tight">Hello, I'm Koushikagawa. I write, share and listen about web development.</h1>
       </div>
       <div class="Copy_img flex-auto">
-        <img class="w-96 self-center mt-6 rounded-lg" src="@/assets/images/heatghost.JPG">
+        <picture>
+          <source src="@/assets/images/heatghost.webp" class="w-96 self-center mt-6 rounded-lg" type="image/webp">
+          <img src="@/assets/images/heatghost.png" alt="heatghost" class="w-96 self-center mt-6 rounded-lg">
+        </picture>
       </div>
     </div>
   
