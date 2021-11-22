@@ -12,13 +12,10 @@
           <!--<span class="text-xs text-grey-dark">Beautiful New Tagline</span>-->
         </div>
       </div>
-<!--
       <div class="sm:mb-0 self-center">
-        <a href="#" class="text-md no-underline text-black hover:text-blue-dark ml-2 px-1">Link1</a>
-        <a href="#" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1">Link2</a>
-        <a href="#" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1">Link3</a>
+        <a href="/about/me/" class="text-md no-underline text-black hover:text-blue-dark ml-2 px-1">About</a>
+        <a href="/blog/" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1">Blog</a>
       </div>
--->
     </nav>
   </div>
 </template>

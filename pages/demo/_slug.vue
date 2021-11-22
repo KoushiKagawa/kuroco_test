@@ -3,9 +3,9 @@
         <Header /> 
         <main class="content">
             <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-3xl xl:px-0 m-4 break-words">
-                <h1>{{about.title}}</h1>
+                <h1>{{demo.title}}</h1>
                 <!--<p>{{about.date}}</p>-->
-                <nuxt-content :document="about" />
+                <nuxt-content :document="demo" />
             </div>
         </main>
         <Footer/>
@@ -23,11 +23,16 @@ export default {
 	},
 
     async asyncData ({ $content, params }) {
-        const about = await $content('about', params.slug || 'index').fetch()
-        return { about }
+        const demo = await $content('demo', params.slug || 'index').fetch()
+        return { demo }
     }
 }
 </script>
+
+<style scoped>
+
+</style>
+
 <!--
 <template>
     <div>
@@ -57,6 +62,35 @@ export default {
             console.log(e.message)
         }
     }
+}
+</script>
+-->
+<!--
+<template>
+    <div>
+        <Header /> 
+        <main class="content">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-3xl xl:px-0 m-4 break-words">  
+                <ul>
+                    <li>content list</li>
+                    <li><NuxtLink to="/news">content list</NuxtLink></li>
+                </ul>
+            </div>
+        </main>
+        <Footer /> 
+    </div>
+</template>
+
+<script>
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
+
+
+export default {
+    components: {
+        Header,
+        Footer
+	},
 }
 </script>
 -->
