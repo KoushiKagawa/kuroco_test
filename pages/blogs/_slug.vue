@@ -23,7 +23,8 @@ export default {
 	},
     async asyncData ({ $axios, params }) {
         try {
-            const response = await $axios.$get(process.env.ROOT_MNG_URL + '/rcms-api/1/enblogdetail/' + `${params.slug}`)
+            //const response = await $axios.$get(process.env.ROOT_MNG_URL + '/rcms-api/1/enblogdetail/' + `${params.slug}`)
+            const response = await $axios.$get('/rcms-api/1/enblogdetail/' + `${params.slug}`)
             console.log(response);
             return { response }
         }catch (e) {
