@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 const { ROOT_MNG_URL } = process.env;
 const { ROOT_API_URL } = process.env;
 const { BASE_URL } = process.env
@@ -26,7 +27,7 @@ module.exports = {
   axios: {
     withCredentials: true,
     
-    baseURL: process.env.ROOT_MNG_URL,
+//    baseURL: process.env.ROOT_MNG_URL,
     credentials: true,
     withCredentials: true
          
@@ -73,7 +74,7 @@ module.exports = {
   'google-gtag': {
     id: 'UA-197463870-1',
     //debug: true, 
-  },
+  }  ,
   env: {
     BASE_URL,
     ROOT_MNG_URL,
