@@ -14,7 +14,7 @@
       </div>
       <div class="sm:mb-0 self-center">
         <a href="/about/me/" class="text-md no-underline text-black hover:text-blue-dark ml-2 px-1">About</a>
-        <a href="/blog/" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1">Blog</a>
+        <a href="/blogs/" class="text-md no-underline text-grey-darker hover:text-blue-dark ml-2 px-1">Blog</a>
       </div>
     </nav>
   </div>
