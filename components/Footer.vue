@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div class="footer">
         <!-- Created -->
         <div class="Description font-sans flex flex-col sm:flex-row py-2 px-6 bg-white sm:items-end">
-        This site is build Nuxt.js, tailwindcss, Kuroco
+        This site is build Nuxt.js, tailwindcss, <a href="https://kuroco.app/ja/free_trial/">Kuroco</a>
         </div>
         <!-- Footer -->
         <div class="Footer font-sans py-2 px-6 bg-white sm:items-end">
