@@ -21,9 +21,11 @@
         <h2 class="text-3xl border-b">💁 ABOUT</h2>
           <ul class="pl-2 list-disc list-inside">
             <li class="py-1 text-lg"><NuxtLink to="/about/me/">About</NuxtLink></li>
+            <!--
             <li class="py-1 text-lg"><a href="https://twitter.com/koshikagawa">Twitter</a></li>
             <li class="py-1 text-lg"><a href="https://github.com/KoushiKagawa">GitHub</a></li>
             <li class="py-1 text-lg"><a href="https://www.instagram.com/kagawa_en/">Instagram</a></li>
+            -->
           </ul>
       </div>
       <div>

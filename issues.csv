@@ -1,0 +1,101 @@
+"number","title","html_url","state","created_at","closed_at","labels.name"
+1627,"[BOT] Settle images from Gyazo to place in local","https://github.com/diverta/front_kuroco_lp/pull/1627","closed","2021-12-03T00:12:11Z","2021-12-03T00:43:11Z","BOT"
+1626,"[WIP] メルマガテンプレート変数追記対応","https://github.com/diverta/front_kuroco_lp/pull/1626","open","2021-12-01T04:38:24Z",
+1625,"translation of change-the-display-of-the-content-editing-page","https://github.com/diverta/front_kuroco_lp/pull/1625","open","2021-12-01T04:31:30Z",
+1624,"画面修正に伴うキャプチャ差し替え・テキスト追記/修正","https://github.com/diverta/front_kuroco_lp/pull/1624","open","2021-12-01T00:55:22Z",
+1623,"管理画面マニュアル -> アクティビティ の追加","https://github.com/diverta/front_kuroco_lp/pull/1623","open","2021-11-30T21:47:29Z",
+1622,"Version2 1591","https://github.com/diverta/front_kuroco_lp/pull/1622","open","2021-11-30T04:54:52Z",
+1621,"translation of signup.md","https://github.com/diverta/front_kuroco_lp/pull/1621","open","2021-11-30T04:46:21Z",
+1620,"[Doc]: 管理画面マニュアル -> アクティビティ 作成","https://github.com/diverta/front_kuroco_lp/issues/1620","open","2021-11-30T01:43:50Z",,"management"
+1619,"[機能提案]:textlint導入","https://github.com/diverta/front_kuroco_lp/issues/1619","open","2021-11-30T01:15:10Z",
+1618,"[BOT] Settle images from Gyazo to place in local","https://github.com/diverta/front_kuroco_lp/pull/1618","closed","2021-11-30T00:12:12Z","2021-11-30T04:05:38Z","BOT"
+1617,"#1569 - How to use filter query","https://github.com/diverta/front_kuroco_lp/pull/1617","open","2021-11-29T10:00:47Z",,"localization"
+1616,"translation of how-to-implement-original-function-into-the-middle-of-processing-by-using-function","https://github.com/diverta/front_kuroco_lp/pull/1616","open","2021-11-29T09:51:31Z",
+1615,"[Doc]: ""What is a headless CMS?""","https://github.com/diverta/front_kuroco_lp/issues/1615","open","2021-11-29T09:16:31Z",,"localization"
+1614,"FAQ メール配信時の件数制限について","https://github.com/diverta/front_kuroco_lp/pull/1614","closed","2021-11-28T20:53:29Z","2021-12-03T07:02:17Z"
+1613,"FAQ メールアドレス変更 追加","https://github.com/diverta/front_kuroco_lp/pull/1613","closed","2021-11-28T20:11:32Z","2021-12-03T06:44:06Z"
+1612,"[BOT] Settle images from Gyazo to place in local","https://github.com/diverta/front_kuroco_lp/pull/1612","closed","2021-11-27T00:11:25Z","2021-11-27T00:31:02Z","BOT"
+1611,"Management - Activity","https://github.com/diverta/front_kuroco_lp/pull/1611","open","2021-11-26T08:49:29Z",
+1610,"[Doc]:Sendgridを利用しない場合、アドレスを「noreply@xxx.kuroco-mail.app」のように一部変更することなどは可能でしょうか？","https://github.com/diverta/front_kuroco_lp/issues/1610","closed","2021-11-26T07:36:58Z","2021-12-03T06:44:06Z","FAQ"
+1609,"[Doc]:メール配信の件数等の利用制限はありますか？","https://github.com/diverta/front_kuroco_lp/issues/1609","closed","2021-11-26T07:34:10Z","2021-12-03T07:02:17Z","FAQ"
+1608,"feat:管理画面マニュアル-reCAPTCHA","https://github.com/diverta/front_kuroco_lp/pull/1608","open","2021-11-26T06:38:54Z",
+1607,"[BOT] Settle images from Gyazo to place in local","https://github.com/diverta/front_kuroco_lp/pull/1607","closed","2021-11-26T00:11:57Z","2021-11-26T02:45:05Z","BOT"
+1606,"[Doc]:GitHubActionsでgenerateに失敗した場合にSlackに結果を通知する方法","https://github.com/diverta/front_kuroco_lp/issues/1606","open","2021-11-25T07:30:15Z",
+1605,"feat:管理画面マニュアル-Slack の追加","https://github.com/diverta/front_kuroco_lp/pull/1605","closed","2021-11-25T04:08:13Z","2021-11-25T08:18:12Z"
+1604,"feat:Tutorial-VAddyと連携してAPIエンドポイントに対する自動診断を設定する。","https://github.com/diverta/front_kuroco_lp/pull/1604","closed","2021-11-25T03:44:35Z","2021-11-29T20:15:08Z"
+1603,"[Doc]:管理画面マニュアル「Recaptcha」追加","https://github.com/diverta/front_kuroco_lp/issues/1603","open","2021-11-25T03:25:53Z",,"management"
+1602,"[BOT] Settle images from Gyazo to place in local","https://github.com/diverta/front_kuroco_lp/pull/1602","closed","2021-11-25T00:12:00Z","2021-11-25T02:57:11Z","BOT"
+1601,"Edit Creating topic group(s) page","https://github.com/diverta/front_kuroco_lp/pull/1601","closed","2021-11-24T19:44:32Z","2021-11-24T19:44:50Z"
+1600,"[Doc]:edit Creating topic group(s) page","https://github.com/diverta/front_kuroco_lp/issues/1600","closed","2021-11-24T10:16:36Z","2021-11-24T19:44:50Z","bug"
+1599,"feat: サイドバー「外部システム連携」修正","https://github.com/diverta/front_kuroco_lp/pull/1599","closed","2021-11-24T06:55:20Z","2021-11-24T06:55:36Z"
+1598,"[Bug]:サイドバーの外部システム連携の項目の表示不具合","https://github.com/diverta/front_kuroco_lp/issues/1598","closed","2021-11-24T04:49:32Z","2021-11-24T06:55:36Z","bug"
+1597,"[Doc]:英訳 管理画面マニュアル -> キャンペーン -> フォーム","https://github.com/diverta/front_kuroco_lp/issues/1597","open","2021-11-24T02:48:02Z",,"localization"
+1596,"左サイドバーメニュー修正","https://github.com/diverta/front_kuroco_lp/pull/1596","closed","2021-11-24T02:34:41Z","2021-11-24T02:34:51Z"
+1595,"[Doc]:英訳 管理画面マニュアル -> KurocoFront","https://github.com/diverta/front_kuroco_lp/issues/1595","open","2021-11-24T02:22:51Z",,"localization"
+1594,"[Doc]:英訳 管理画面マニュアル -> ファイル","https://github.com/diverta/front_kuroco_lp/issues/1594","open","2021-11-24T02:14:39Z",,"localization"
+1593,"[Doc]:英訳 管理画面マニュアル -> API","https://github.com/diverta/front_kuroco_lp/issues/1593","open","2021-11-24T02:11:25Z",,"localization"
+1592,"[Doc]:管理画面プラグインを使ってKuroco管理画面に任意の動作を適用する　の追加","https://github.com/diverta/front_kuroco_lp/issues/1592","open","2021-11-24T02:02:06Z",,"tutorials"
+1591,"[Doc]:英訳 管理画面マニュアル -> コンテンツ","https://github.com/diverta/front_kuroco_lp/issues/1591","open","2021-11-24T01:48:52Z",,"localization"
+1590,"[Doc]:英訳 管理画面マニュアル ->  コンテンツ定義","https://github.com/diverta/front_kuroco_lp/issues/1590","open","2021-11-24T01:45:46Z",,"localization"
+1589,"[Doc]:英訳 フォーム定義で利用できるフォーム項目一覧","https://github.com/diverta/front_kuroco_lp/issues/1589","open","2021-11-24T01:37:55Z",,"localization"
+1588,"Version2 1575","https://github.com/diverta/front_kuroco_lp/pull/1588","open","2021-11-24T01:34:28Z",
+1587,"[Doc]:英訳 独自ドメイン登録後、kuroco-front.appのドメインをフロントエンドのステージサイトとして利用する","https://github.com/diverta/front_kuroco_lp/issues/1587","open","2021-11-24T01:33:51Z",,"localization"
+1586,"[Doc]:英訳 チュートリアル -> 記事編集画面の表示を変更する","https://github.com/diverta/front_kuroco_lp/issues/1586","open","2021-11-24T01:23:17Z",,"localization"
+1585,"[Doc]:英訳 チュートリアル -> アカウント登録する","https://github.com/diverta/front_kuroco_lp/issues/1585","open","2021-11-24T01:02:39Z",,"localization"
+1584,"[BOT] Settle images from Gyazo to place in local","https://github.com/diverta/front_kuroco_lp/pull/1584","closed","2021-11-24T00:12:01Z","2021-11-24T00:31:44Z","BOT"
+1583,"英語ページサイドメニューの「External system cooperation」の文言修正","https://github.com/diverta/front_kuroco_lp/pull/1583","closed","2021-11-23T19:33:22Z","2021-11-23T19:38:39Z"
+1582,"(New) translated how-to-use-recaptcha","https://github.com/diverta/front_kuroco_lp/pull/1582","open","2021-11-23T09:44:58Z",
+1581,"英語ページサイドメニューの「External system cooperation」の文言修正","https://github.com/diverta/front_kuroco_lp/issues/1581","closed","2021-11-23T09:21:15Z","2021-11-23T19:38:39Z","localization"
+1580,"（新）英訳：reCAPTCHAを利用する","https://github.com/diverta/front_kuroco_lp/issues/1580","open","2021-11-23T08:06:19Z",,"localization"
+1579,"[BOT] Settle images from Gyazo to place in local","https://github.com/diverta/front_kuroco_lp/pull/1579","closed","2021-11-23T00:11:48Z","2021-11-23T10:28:10Z","BOT"
+1578,"#1556 - API endpoint settings English document","https://github.com/diverta/front_kuroco_lp/pull/1578","open","2021-11-22T11:50:29Z",
+1577,"#1556 - API endpoint settings English document","https://github.com/diverta/front_kuroco_lp/pull/1577","closed","2021-11-22T11:35:57Z","2021-11-22T11:38:02Z"
+1576,"[Bug]:左サイドメニュー [管理画面マニュアル] -> [外部システム連携]内メニュークリックでメニューが閉じてしまう。","https://github.com/diverta/front_kuroco_lp/issues/1576","closed","2021-11-22T06:20:19Z","2021-11-22T06:28:59Z","bug"
+1575,"[Doc]:Localization the Jamstack documentation.","https://github.com/diverta/front_kuroco_lp/issues/1575","open","2021-11-22T05:45:18Z",,"localization"
+1574,"feat:VAddyの管理画面マニュアルを追加","https://github.com/diverta/front_kuroco_lp/pull/1574","closed","2021-11-22T03:09:26Z","2021-11-22T06:27:10Z"
+1573,"[Doc]:VAddyと連携して日次の自動診断を設定する。","https://github.com/diverta/front_kuroco_lp/issues/1573","closed","2021-11-22T03:03:36Z","2021-11-29T20:15:08Z","tutorials"
+1572,"Jamstackドキュメント修正","https://github.com/diverta/front_kuroco_lp/pull/1572","closed","2021-11-22T00:41:26Z","2021-11-22T00:55:30Z"
+1571,"[Doc]:Jamstackについて 修正","https://github.com/diverta/front_kuroco_lp/issues/1571","closed","2021-11-21T21:21:03Z","2021-11-22T00:55:30Z"
+1570,"[Doc]:英訳 コンテンツ定義で利用できる拡張項目一覧","https://github.com/diverta/front_kuroco_lp/issues/1570","open","2021-11-21T21:11:06Z",,"localization"
+1569,"[Doc]:英訳 検索機能の使い方","https://github.com/diverta/front_kuroco_lp/issues/1569","open","2021-11-21T21:09:35Z",,"localization"
+1568,"Localization：https://drive.google.com/drive/u/1/folders/1acPQSzyopejh2fCcunfRhakXB3v8msyP -> WIP_Kuroco_営業資料_localize.pptx","https://github.com/diverta/front_kuroco_lp/issues/1568","open","2021-11-20T05:03:36Z",
+1567,"英訳：オリジナル処理を利用して、コンテンツ追加時にメールを送信する","https://github.com/diverta/front_kuroco_lp/issues/1567","open","2021-11-19T10:17:18Z",,"localization"
+1566,"translation of ec-management.md","https://github.com/diverta/front_kuroco_lp/pull/1566","open","2021-11-19T09:35:11Z",
+1565,"英訳：管理画面よりECの設定を行う","https://github.com/diverta/front_kuroco_lp/issues/1565","open","2021-11-19T07:57:20Z",,"localization"
+1564,"英訳：ECサイトを作成する フロントエンドを作成する","https://github.com/diverta/front_kuroco_lp/issues/1564","open","2021-11-19T07:51:51Z",,"localization"
+1563,"英訳： ECサイト構築に必要なAPIの設定を行う","https://github.com/diverta/front_kuroco_lp/issues/1563","open","2021-11-19T07:46:27Z",,"localization"
+1562,"translation of inquiry-answer.md","https://github.com/diverta/front_kuroco_lp/pull/1562","open","2021-11-19T03:51:23Z",
+1561,"how-do-i-edit-the-widget-at-the-top-of-the-administration-screen.md(英訳)を追加","https://github.com/diverta/front_kuroco_lp/pull/1561","open","2021-11-19T03:15:29Z",
+1560,"[Doc]FAQ:how-do-i-edit-the-widget-at-the-top-of-the-administration-screen.md の英訳","https://github.com/diverta/front_kuroco_lp/issues/1560","open","2021-11-19T02:56:12Z",,"localization"
+1559,"FAQ GitHubサードパーティ製のアプリを利用して問題ないでしょうか","https://github.com/diverta/front_kuroco_lp/pull/1559","closed","2021-11-19T00:38:53Z","2021-11-19T08:35:38Z"
+1558,"[Doc]FAQ:can-i-change-the-content-displayed-in-the-article-editing-screen.md の英訳","https://github.com/diverta/front_kuroco_lp/issues/1558","open","2021-11-18T10:16:11Z",,"localization"
+1557,"[Doc]FAQ: member-edit.md の英訳","https://github.com/diverta/front_kuroco_lp/issues/1557","open","2021-11-18T08:24:56Z",,"localization"
+1556,"[Doc]:英語：エンドポイント 設定項目一覧","https://github.com/diverta/front_kuroco_lp/issues/1556","open","2021-11-18T06:29:11Z",,"localization"
+1555,"[BOT] Settle images from Gyazo to place in local","https://github.com/diverta/front_kuroco_lp/pull/1555","closed","2021-11-18T00:11:56Z","2021-11-18T00:29:50Z","BOT"
+1554,"[Doc]:GitHubサードパーティ製のアプリを利用して問題ないでしょうか？","https://github.com/diverta/front_kuroco_lp/issues/1554","closed","2021-11-17T12:45:50Z","2021-11-19T08:35:37Z","FAQ"
+1553,"パートナープログラム申し込みフォームリンク修正","https://github.com/diverta/front_kuroco_lp/pull/1553","closed","2021-11-17T12:33:44Z","2021-11-17T12:34:47Z"
+1552,"[Doc]:Kuroco sales Materials localization + add Add a description of Headless CMS.","https://github.com/diverta/front_kuroco_lp/issues/1552","open","2021-11-17T12:26:38Z",,"localization"
+1551,"[Doc]:Kuroco パートナープログラム の問い合わせリンク修正","https://github.com/diverta/front_kuroco_lp/issues/1551","closed","2021-11-17T09:10:02Z","2021-11-17T12:34:47Z"
+1550,"[BOT] Settle images from Gyazo to place in local","https://github.com/diverta/front_kuroco_lp/pull/1550","closed","2021-11-17T00:11:53Z","2021-11-17T00:35:25Z","BOT"
+1549,"can-i-adjust-the-display-of-article-groups-for-each-group-of-member.m…","https://github.com/diverta/front_kuroco_lp/pull/1549","open","2021-11-16T11:59:09Z",
+1548,"translated apply-css-to-management-page-using-the-management-screen-plugin","https://github.com/diverta/front_kuroco_lp/pull/1548","open","2021-11-16T09:17:27Z",
+1547,"feat:FAQ-メールの送信元に独自ドメインを利用するにはどうしたらよいでしょうか？","https://github.com/diverta/front_kuroco_lp/pull/1547","closed","2021-11-16T08:30:20Z","2021-11-17T21:04:47Z"
+1546,"integration with Firebase edit images","https://github.com/diverta/front_kuroco_lp/pull/1546","closed","2021-11-16T07:54:45Z","2021-11-16T08:02:30Z"
+1545,"[Bug]:英語ページのサイドメニュー「Magazine」の綴り間違い","https://github.com/diverta/front_kuroco_lp/issues/1545","closed","2021-11-16T06:26:29Z","2021-11-16T08:03:17Z","bug"
+1544,"can-i-adjust-the-appearance-of-the-management-screen.md(英訳)の追加","https://github.com/diverta/front_kuroco_lp/pull/1544","open","2021-11-16T05:06:41Z",
+1543,"[Doc]FAQ:can-i-adjust-the-display-of-article-groups-for-each-group-of-member.md　の英訳","https://github.com/diverta/front_kuroco_lp/issues/1543","open","2021-11-16T04:29:30Z",,"localization"
+1542,"[Doc]FAQ:can-i-adjust-the-appearance-of-the-management-screen.md の英訳","https://github.com/diverta/front_kuroco_lp/issues/1542","open","2021-11-16T04:28:48Z",,"localization"
+1541,"[Doc]FAQ:can-I-use-single-sign-on-using-saml.md の英訳","https://github.com/diverta/front_kuroco_lp/issues/1541","closed","2021-11-16T04:26:55Z","2021-11-18T08:14:56Z","localization"
+1540,"[Doc]FAQ:can-I-use-single-sign-on-using-oauth.md の英訳","https://github.com/diverta/front_kuroco_lp/issues/1540","closed","2021-11-16T04:25:25Z","2021-11-18T08:14:46Z","localization"
+1539,"[Bug]:Cloud storage integration with Firebaseチュートリアルページの画像が表示されていない","https://github.com/diverta/front_kuroco_lp/issues/1539","closed","2021-11-16T03:07:45Z","2021-11-16T08:02:30Z","bug"
+1538,"KurocoFrontで独自ドメインを利用する手順にYAMLファイル修正箇所追記","https://github.com/diverta/front_kuroco_lp/pull/1538","open","2021-11-16T02:03:34Z",
+1537,"[BOT] Settle images from Gyazo to place in local","https://github.com/diverta/front_kuroco_lp/pull/1537","closed","2021-11-16T00:11:42Z","2021-11-16T05:05:23Z","BOT"
+1536,"feat:FAQ-CSVダウンロードした多言語のコンテンツが文字化けします","https://github.com/diverta/front_kuroco_lp/pull/1536","closed","2021-11-15T09:42:10Z","2021-11-16T02:38:01Z"
+1535,"英訳：管理画面-回答画面","https://github.com/diverta/front_kuroco_lp/issues/1535","open","2021-11-15T09:18:28Z",,"localization"
+1534,"feat:FAQ-公開日時の設定で、時間の選択間隔を変更できますか？","https://github.com/diverta/front_kuroco_lp/pull/1534","closed","2021-11-15T08:40:28Z","2021-11-16T08:10:40Z"
+1533,"英訳：管理画面プラグインを使ってKuroco管理画面に任意のCSSを適用する","https://github.com/diverta/front_kuroco_lp/issues/1533","open","2021-11-15T07:33:20Z",,"localization"
+1532,"[Doc]:独自ドメインの利用手順にGithubActionsの記述の変更とAPIのドメインの変更の記述追記する","https://github.com/diverta/front_kuroco_lp/issues/1532","open","2021-11-15T06:44:02Z",,"tutorials"
+1531,"[BOT] Settle images from Gyazo to place in local","https://github.com/diverta/front_kuroco_lp/pull/1531","closed","2021-11-15T00:11:46Z","2021-11-15T03:30:14Z","BOT"
+1530,"[Doc]:APIのキャッシュについて、filter機能を使用している場合はAPIのキャッシュは非対応でしょうか？","https://github.com/diverta/front_kuroco_lp/issues/1530","open","2021-11-12T05:25:51Z",,"FAQ"
+1529,"[Doc]:公開日時の設定の選択間隔を変更したい","https://github.com/diverta/front_kuroco_lp/issues/1529","closed","2021-11-11T08:14:07Z","2021-11-16T08:10:40Z","FAQ"
+1528,"Filter queryに「ymd_time」の追加","https://github.com/diverta/front_kuroco_lp/pull/1528","closed","2021-11-11T00:23:42Z","2021-11-11T05:12:48Z"
