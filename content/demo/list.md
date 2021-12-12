@@ -21,7 +21,7 @@ title: Kuroco Tutorials
         <tr>
             <td class="border px-4 py-2">login</td>
             <td class="border px-4 py-2"><a href="/login/">/login</a></td>
-            <td class="border px-4 py-2"><a href="https://kuroco.app/ja/docs/tutorials/integrate-kuroco-with-nuxt/">KurocoとNuxt.jsで、コンテンツ一覧ページを作成する</a></td>
+            <td class="border px-4 py-2"><a href="https://kuroco.app/ja/docs/tutorials/integrate-login/">KurocoとNuxt.jsで、ログイン画面を構築する</a></td>
         </tr>
         <tr>
             <td class="border px-4 py-2">ログイン</td>
