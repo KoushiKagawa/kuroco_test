@@ -88,14 +88,6 @@ jobs:
           webhook_url: "https://kagawa.g.kuroco.app/direct/menu/github/"
           webhook_secret: "7c3e23fa9356025c387247c740a293e4"
           data: '{"domain":"koushikagawa.com", "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ github.sha }}"}'
-      - name: Slack Notification Success
-        uses: rtCamp/action-slack-notify@v2.0.0
-        env:
-          SLACK_CHANNEL: 00_general
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-          SLACK_TITLE: Success to Deploy to GitHub Pages :rocket:'
-          SLACK_MESSAGE: ':closed_book: ${{ github.repository }}'
-          SLACK_COLOR: '#5cb85c' 
       - name: Slack Notification on Failure
         uses: rtCamp/action-slack-notify@master
         if: failure()
