@@ -19,8 +19,11 @@ date: 2020.9.5
 
 ---
 
-### 画像はHTMLタグ
-<img src="/_nuxt/assets/images/heatghost.png" alt="heatghost" class="w-96 self-center mt-6 rounded-lg">
+### 画像
+
+[![Image](/images/150_150.png)](/150_150.png)
+画像はstatic/imagesに配置
+
 
 ### table
 
@@ -28,3 +31,13 @@ date: 2020.9.5
 |:-------|:-------|
 | auto   | WebPをサポートしている場合、自動的にフォーマットを変換します。|
 | bgcolor | 背景色を設定します。|
+
+### code
+```vue
+<script>
+export default {
+  methods: {
+  }
+}
+</script>
+```

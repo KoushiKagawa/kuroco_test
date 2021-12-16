@@ -65,10 +65,19 @@ module.exports = {
     '@nuxtjs/recaptcha'
   ],
   
+  /*
   recaptcha: {
     hideBadge: true,
     siteKey: '6Lf0pMwcAAAAACGnNa6nqBVATAudJT0VJki6kHP-',
     version: 3
+  },
+  */
+  recaptcha: {
+    hideBadge: true,
+    language: 'ja',
+    siteKey: '6LdQppsdAAAAAJOXsOAcPyM-sATEb7wyT0UQphFs',
+    version: 2,
+    size: 'normal'        // Size: 'compact', 'normal', 'invisible' (v2)
   },
   
   'google-gtag': {

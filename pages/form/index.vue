@@ -8,80 +8,82 @@
                     <div class="row--status">
                         <h2>{{ name }}</h2>
                     </div>
-<form>
-            <div class="mb-6">
-              <label
-                for="name"
-                class="block mb-2 text-sm text-gray-600"
-              >
-                お名前
-                <span class="text-xs text-red-500">(必須)</span>
-              </label>
-              <input
-                id="name"
-                type="text"
-                name="name"
-                placeholder="お名前太郎"
-                class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
-              />
-            </div>
-            <div class="mb-6">
-              <label
-                for="email"
-                class="block mb-2 text-sm text-gray-600"
-              >
-                メールアドレス
-                <span class="text-xs text-red-500">(必須)</span>
-              </label>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                placeholder="your@example.com"
-                class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
-              />
-            </div>
-            <div class="mb-6">
-              <label
-                for="phone"
-                class="text-sm text-gray-600"
-              >
-                電話番号
-              </label>
-              <input
-                id="phone"
-                type="text"
-                name="phone"
-                placeholder="0312345678"
-                class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
-              />
-            </div>
-            <div class="mb-6">
-              <label
-                for="message"
-                class="block mb-2 text-sm text-gray-600"
-              >
-                内容
-                <span class="text-xs text-red-500">(必須)</span>
-              </label>
-              <textarea
-                id="message"
-                rows="5"
-                name="message"
-                placeholder="お問い合わせ内容です"
-                class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
-              >
-              </textarea>
-            </div>
-            <div class="mb-6">
-              <button
-                @click="handleOnSubmit"
-                class="w-full px-3 py-4 font-bold text-white bg-green-500 rounded-md focus:bg-green-600 focus:outline-none"
-              >
-                送信する
-              </button>
-            </div>
-          </form>
+                    <form>
+                      <div class="mb-6">
+                        <label
+                          for="name"
+                          class="block mb-2 text-sm text-gray-600"
+                        >
+                          お名前
+                          <span class="text-xs text-red-500">(必須)</span>
+                        </label>
+                        <input
+                          id="name"
+                          type="text"
+                          name="name"
+                          placeholder="お名前太郎"
+                          class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                        />
+                      </div>
+                      <div class="mb-6">
+                        <label
+                          for="email"
+                          class="block mb-2 text-sm text-gray-600"
+                        >
+                          メールアドレス
+                          <span class="text-xs text-red-500">(必須)</span>
+                        </label>
+                        <input
+                          id="email"
+                          type="email"
+                          name="email"
+                          placeholder="your@example.com"
+                          class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                        />
+                      </div>
+                      <div class="mb-6">
+                        <label
+                          for="phone"
+                          class="text-sm text-gray-600"
+                        >
+                          電話番号
+                        </label>
+                        <input
+                          id="phone"
+                          type="text"
+                          name="phone"
+                          placeholder="0312345678"
+                          class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                        />
+                      </div>
+                      <div class="mb-6">
+                        <label
+                          for="message"
+                          class="block mb-2 text-sm text-gray-600"
+                        >
+                          内容
+                          <span class="text-xs text-red-500">(必須)</span>
+                        </label>
+                        <textarea
+                          id="message"
+                          rows="5"
+                          name="message"
+                          placeholder="お問い合わせ内容です"
+                          class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
+                        >
+                        </textarea>
+                      </div>
+                      <inquiry-recaptcha ref="recaptcha" :is-succeeded.sync="canSubmit" />
+                    
+                      <div class="mb-6">
+                        <button
+                          @click="handleOnSubmit"
+                          class="w-full px-3 py-4 font-bold text-white bg-green-500 rounded-md focus:bg-green-600 focus:outline-none"
+                        >
+                          送信する
+                        </button>
+                      </div>
+                    </form>
 
             </div>
           </div>
@@ -90,6 +92,7 @@
 </template>
 <script>
 import Nav from "@/components/Nav.vue";
+import InquiryRecaptcha from '@/components/inquiry/inquiry-recaptcha.vue'
 
 const FORM_ID = 7 // 作成したフォーム定義のID
 
@@ -105,7 +108,7 @@ export default {
   },
     components: {
 		Nav,
-  
+    InquiryRecaptcha
   },
 
 async mounted() {
@@ -153,6 +156,20 @@ async asyncData({ $axios }) {
     }
   },
   methods: {
+    async submit() {
+      this.$axios.$post('/form/', {
+        ...this.formData,
+        recaptcha_response: await this.$refs.recaptcha.fetchResponse(),
+      }).then((response) => {
+        if (response.errors.length > 0) {
+          throw new Error('Post failed.');
+        }
+        this.$router.push({ path: '/form/' });
+      }).catch((response) => {
+        this.canSubmit = false;
+      });
+      await this.$recaptcha.reset();
+    },
     textLines2texts(textLines = '') {
       return textLines.split('\r\n')
     },
