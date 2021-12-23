@@ -1,6 +1,8 @@
 require('dotenv').config();
-const { ROOT_MNG_URL } = process.env;
 
+const { ROOT_MNG_URL } = process.env;
+const { ROOT_API_URL } = process.env;
+const { BASE_URL } = process.env
 
 module.exports = {
   /*
@@ -15,16 +17,27 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
   },
   /*
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  
+  axios: {
+    withCredentials: true,
+    
+//    baseURL: process.env.ROOT_MNG_URL,
+    credentials: true,
+    withCredentials: true
+         
+  },
+
+  
   /*
   ** Build configuration
   */
-  build: {
+   build: {
     /*
     ** Run ESLint on save
     */
@@ -45,18 +58,36 @@ module.exports = {
   modules: [
     '@nuxtjs/axios',
     '@nuxtjs/vuetify',
-    'bootstrap-vue/nuxt',
+    /*'bootstrap-vue/nuxt',*/
     '@nuxtjs/google-gtag',
     '@nuxtjs/tailwindcss',
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/recaptcha'
   ],
+  
+  /*
+  recaptcha: {
+    hideBadge: true,
+    siteKey: '6Lf0pMwcAAAAACGnNa6nqBVATAudJT0VJki6kHP-',
+    version: 3
+  },
+  */
+  recaptcha: {
+    hideBadge: true,
+    language: 'ja',
+    siteKey: '6LdQppsdAAAAAJOXsOAcPyM-sATEb7wyT0UQphFs',
+    version: 2,
+    size: 'normal'        // Size: 'compact', 'normal', 'invisible' (v2)
+  },
+  
   'google-gtag': {
     id: 'UA-197463870-1',
     //debug: true, 
-  },
+  }  ,
   env: {
-    //BASE_URL
-    ROOT_MNG_URL
+    BASE_URL,
+    ROOT_MNG_URL,
+    ROOT_API_URL
   }
 }
 

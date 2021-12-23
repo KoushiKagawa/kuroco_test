@@ -1,0 +1,7 @@
+rules:
+
+    - expected: Cookie
+    - expected: Expo
+      pattern: expo
+    - expected: JavaScript 
+      pattern: javascript

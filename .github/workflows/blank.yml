@@ -48,7 +48,16 @@ jobs:
           webhook_url: "https://kagawa.g.kuroco.app/direct/menu/github/"
           webhook_secret: "7c3e23fa9356025c387247c740a293e4"
           data: '{"domain":"koushikagawa.com","pr":"${{ github.event.issue.pull_request.url }}",  "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ steps.get_branch.outputs.sha }}"}'
-          
+      - name: Slack Notification on Failure
+        uses: rtCamp/action-slack-notify@master
+        if: failure()
+        env:
+          SLACK_CHANNEL: 00_general
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_TITLE: build error
+          SLACK_MESSAGE: 'https://example.g.kuroco.app/'
+          SLACK_COLOR: danger
+
   #for Push
   pushed_build:
     name: Build(pushed)
@@ -79,3 +88,12 @@ jobs:
           webhook_url: "https://kagawa.g.kuroco.app/direct/menu/github/"
           webhook_secret: "7c3e23fa9356025c387247c740a293e4"
           data: '{"domain":"koushikagawa.com", "repository":"${{ github.repository }}", "run_id":"${{ github.run_id }}", "hash":"${{ github.sha }}"}'
+      - name: Slack Notification on Failure
+        uses: rtCamp/action-slack-notify@master
+        if: failure()
+        env:
+          SLACK_CHANNEL: 00_general
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_TITLE: build error
+          SLACK_MESSAGE: 'https://example.g.kuroco.app/'
+          SLACK_COLOR: danger

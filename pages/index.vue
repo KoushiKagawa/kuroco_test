@@ -1,81 +1,95 @@
 <template>
   <div>
-    <Nav /> 
-    <main>
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 xl:max-w-5xl xl:px-0 m-4">    
-      <div class="divide-y divide-gray-200">
-        <h1 class="text-3xl font-extrabold text-gray-900 tracking-tight sm:text-4xl md:text-[4rem] md:leading-[3.5rem]">Popular blog posts</h1>
+    <Header/>
+
+    <!-- Message -->
+    <div class="Main font-sans flex flex-col sm:flex-row py-2 px-6 bg-white sm:items-end">
+      <div class="Copy_text flex-auto">
+        <h1 class="text-5xl leading-tight">Hello, I'm Koushikagawa. I write, share and listen about web development.</h1>
+      </div>
+      <div class="Copy_img flex-auto">
+        <picture>
+          <source srcset="@/assets/images/heatghost.webp" class="w-96 self-center mt-6 rounded-lg" type="image/webp">
+          <img src="@/assets/images/heatghost.png" alt="heatghost" class="w-96 self-center mt-6 rounded-lg">
+        </picture>
+      </div>
+    </div>
+  
+    <!-- MENU-->
+    <div class="Menu grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4 font-sans py-2 px-6 bg-white mt-32">
+      <div>
+        <h2 class="text-3xl border-b">💁 ABOUT</h2>
+          <ul class="pl-2 list-disc list-inside">
+            <li class="py-1 text-lg"><NuxtLink to="/about/me/">About</NuxtLink></li>
+            <!--
+            <li class="py-1 text-lg"><a href="https://twitter.com/koshikagawa">Twitter</a></li>
+            <li class="py-1 text-lg"><a href="https://github.com/KoushiKagawa">GitHub</a></li>
+            <li class="py-1 text-lg"><a href="https://www.instagram.com/kagawa_en/">Instagram</a></li>
+            -->
+          </ul>
+      </div>
+      <div>
+        <h2 class="text-3xl border-b">✍️ WORK</h2>
+          <ul class="pl-2 list-disc list-inside">
+            <li class="py-1 text-lg"><a href="https://kuroco.app/docs/">Kuroco Docs</a></li>
+            <li class="py-1 text-lg"><NuxtLink to="/demo/list/">Kuroco Tutorials</NuxtLink></li>
+            <!--<li class="py-1 text-lg"><a href="https://www.sweet-bakery.co.jp/">SWEET bakery</a></li>-->
+          </ul>
+      </div>
+      <div>
+        <h2 class="text-3xl border-b"><NuxtLink to="/blogs/">❤️ BLOG</NuxtLink></h2>
         <ul
           v-for="n in response.list"
           :key="n.slug"
-          class ="divide-y divide-gray-200"
+          class ="pl-2 list-disc list-inside"
         >
-          <NuxtLink
-            :to="'/blogs/' + n.slug"
-            class="light:bg-light-surface dark:bg-dark-surface flex flex-col-reverse lg:flex-row mb-8 rounded p-4 sm:p-8 lg:p-4 light:hover:bg-gray-200 dark:hover:bg-gray-800 cursor-pointer transition-colors duration-300 ease-linear"
-          >
-          <li class="py-1.5">
-            <article class="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
-              <dl>
-                <dt class="sr-only">Published on</dt>
-                <dd class="text-base font-medium text-gray-500 mr-4">
-                  <time datetime="2021-08-11T19:30:00.000Z">{{ n.ymd }}</time>
-                  <img
-                    v-if="n.ext_col_01.url"
-                    class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover rounded-md"
-                    :src="n.ext_col_01.url"
-                  />
-                </dd>
-              </dl>
-              <div class="space-y-5 xl:col-span-3">
-                <div class="space-y-6">
-                  <h2 class="text-2xl font-bold tracking-tight"><span>{{ n.subject }}</span></h2>
-                  <div class="prose max-w-none text-gray-500">
-                    <div class="prose max-w-none">
-                      <p>{{ n.ext_col_02 }}</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="text-base font-medium">
-                  <span class="text-teal-600 hover:text-teal-700" aria-label="Read &quot;Introducing Tailwind UI Ecommerce&quot;">Read more -></span>
-                </div>
-              </div>
-            </article>
+          <li class="py-1 text-lg">
+            <NuxtLink
+                :to="'/blogs/' + n.slug"
+                class="no-underline"
+            >
+            {{ n.subject }}
+            </NuxtLink>
           </li>
-          </NuxtLink>
-          <!--
-          <NuxtLink
-            :to="'/sample/' + n.slug"
-            class="light:bg-light-surface dark:bg-dark-surface flex flex-col-reverse lg:flex-row mb-8 rounded p-4 sm:p-8 lg:p-4 light:hover:bg-gray-200 dark:hover:bg-gray-800 cursor-pointer transition-colors duration-300 ease-linear"
-          >
-          <h2 class="font-bold">{{ n.subject }}</h2>
-          <p class="font-bold text-gray-600 text-sm">{{ n.ymd }}</p>
-          <img
-              v-if="n.ext_col_01.url"
-              class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover"
-              :src="n.ext_col_01.url"
-          />
-          </NuxtLink>
-          -->
         </ul>
+        <p class="text-right"><NuxtLink to="/blogs/">All Blogs</NuxtLink></p>
+      </div>
+      <div>
+        <h2 class="text-3xl border-b">🗻 for JAPANESE</h2>
+          <ul class="pl-2 list-disc list-inside">
+            <li class="py-1 text-lg"><a href="https://koushikagawa.github.io/">About</a></li>
+            <li class="py-1 text-lg"><a href="https://note.com/koushikagawa/">note</a></li>
+            <li class="py-1 text-lg"><a href="https://twitter.com/koushikagawa">Twitter</a></li>
+          </ul>
       </div>
     </div>
-    </main>
+
+    <Footer/>
+
   </div>
 </template>
 
 <script>
-import Nav from "@/components/Nav.vue";
+import Menu from "@/components/Menu.vue";
+import Header from "@/components/Header.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   components: {
-			Nav
+			Menu,
+      Header,
+      Footer
 	},
   async asyncData({ $axios }) {
     try {
       const response = await $axios.$get(
-        process.env.ROOT_MNG_URL + '/rcms-api/1/enbloglist'
-      )
+          process.env.ROOT_MNG_URL + '/rcms-api/1/enbloglist',
+          {
+          params: {
+            cnt: 5,
+          }
+        }
+      )       
       return { response }
     } catch (e) {
       console.log(e.message)
@@ -83,3 +97,5 @@ export default {
   }
 }
 </script>
+<style>
+</style>

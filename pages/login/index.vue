@@ -1,24 +1,64 @@
 <template>
-    <div class="login-form">
-        <form @submit.prevent="login">
-        <p class="error" v-if="error">{{ error }}</p>
-        <p><input type="text" v-model="email" placeholder="email" name="email"/></p>
-        <p><input type="text" v-model="password" placeholder="password" name="password"/></p>
-        <div class="login-btn">
-            <button type="submit">ログイン</button>
+    <form @submit.prevent="login">
+        <p v-if="loginStatus !== null" :style="{ color: resultMessageColor }">
+            {{ resultMessage }}
+        </p>
+        <input v-model="email" name="email" type="email" placeholder="email">
+        <input
+            v-model="password"
+            name="password"
+            type="password"
+            placeholder="password"
+        >
+        <button type="submit">
+            ログイン
+        </button>
+        <div>
+            <nuxt-link to="/news">
+                ニュース一覧ページへ
+            </nuxt-link>
         </div>
-        </form>
-    </div>
+    </form>
 </template>
 
 <script>
 export default {
-    async asyncData ({ $axios }) {
-        try {
-            const response = await $axios.$get(process.env.ROOT_MNG_URL + '/rcms-api/1/samples')
-            return { response }
-        }catch (e) {
-            console.log(e.message)
+    data () {
+        return {
+            email: '',
+            password: '',
+
+            loginStatus: null,
+            resultMessage: null
+        }
+    },
+    computed: {
+        resultMessageColor () {
+            switch (this.loginStatus) {
+            case 'success':
+                return 'green'
+            case 'failure':
+                return 'red'
+            default:
+                return ''
+            }
+        }
+    },
+    methods: {
+        async login () {
+            try {
+                const payload = {
+                    email: this.email,
+                    password: this.password
+                }
+                await this.$store.dispatch('login', payload)
+ 
+                this.loginStatus = 'success'
+                this.resultMessage = 'ログインに成功しました。'
+            } catch (e) {
+                this.loginStatus = 'failure'
+                this.resultMessage = 'ログインに失敗しました。'
+            }
         }
     }
 }
