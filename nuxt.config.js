@@ -27,7 +27,7 @@ module.exports = {
   axios: {
     withCredentials: true,
     
-//    baseURL: process.env.ROOT_MNG_URL,
+    baseURL: process.env.BASE_URL,
     credentials: true,
     withCredentials: true
          

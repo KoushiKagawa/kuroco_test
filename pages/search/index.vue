@@ -1,54 +1,167 @@
 <template>
-<body>
-  <div class="frame-root">
-    <div class="frame-content">
-      <!-- header -->
-      <header class="text-gray-600 body-font">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-          <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-            <span class="ml-3 text-xl">Tailblocks</span>
-          </a>
-          <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a class="mr-5 hover:text-gray-900" href="/">HOME</a>
-            <a class="mr-5 hover:text-gray-900" href="/form">Blog</a>
-            <a class="mr-5 hover:text-gray-900"> Link</a>
-            <a class="mr-5 hover:text-gray-900">Fourth Link</a>
-          </nav>
-          <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></button>
-        </div>
-      </header>
-
-      <!-- main -->
-      <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-wrap -m-4">
-            <div v-for="n in response.list" :key="n.slug" class="p-4 md:w-1/3">
-              <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                <img v-if="n.ext_col_01.url" class="lg:h-48 md:h-36 w-full object-cover object-center" :src="n.ext_col_01.url" alt="blog">
-                <div class="p-6">
-                  <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
-                  <h1 class="title-font text-lg font-medium text-gray-900 mb-3"><nuxt-link :to="'/blogs/'+ n.slug">{{n.ymd}}{{n.subject}}</nuxt-link></h1>
-                  <p class="leading-relaxed mb-3">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div>
+    <div class="search-form">
+      <p>
+        <label for="subject">Title</label>
+        <input v-model="searchInput.subject" type="text">
+      </p>
+      <p>
+        <label for="inst_ymdhi">Created at</label>
+        <input v-model="searchInput.inst_ymdhi.from" type="date"> 
+        ~
+        <input v-model="searchInput.inst_ymdhi.to" type="date"> 
+      </p>
+      <p>
+        <label for="ext_col_01">Text</label>
+        <input v-model="searchInput.ext_col_01" type="text">
+      </p>
+      <p>
+        <label for="ext_col_02">Select</label>
+        <select v-model="searchInput.ext_col_02">
+          <option value="">Not selected</option>
+          <option value="01">option1</option>
+          <option value="02">option2</option>
+          <option value="03">option3</option>
+        </select>
+      </p>
+      <p>
+        <label for="ext_col_03">Checkbox</label>
+        <input v-model="searchInput.ext_col_03" type="checkbox" value="01">option1
+        <input v-model="searchInput.ext_col_03" type="checkbox" value="02">option2
+        <input v-model="searchInput.ext_col_03" type="checkbox" value="03">option3
+      </p>  
+      <button type="button" @click="search">Search</button>
+    </div>
+    <div v-if="Object.keys(searchResult).length > 0" class="search-result">
+      <template v-if="(searchResult.errors || []).length === 0">
+        <table>
+          <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Created at</th>
+            <th>Text</th>
+            <th>Select</th>
+            <th>Checkbox</th>
+          </tr>
+          <tr v-for="content in searchResult.list" :key="content.topics_id">
+            <td>{{ content.topics_id }}</td>
+            <td>{{ content.subject }}</td>
+            <td>{{ content.inst_ymdhi }}</td>
+            <td>{{ content.ext_col_01 }}</td>
+            <td>{{ content.ext_col_02 }}</td>
+            <td>{{ content.ext_col_03 }}</td>
+          </tr>
+        </table>
+      </template>
+      <template v-else>
+        {{ searchResult.errors }}
+      </template>
     </div>
   </div>
-</body>
 </template>
 
 <script>
 export default {
-    async asyncData ({ $axios }) {
-        try {
-            const response = await $axios.$get(process.env.ROOT_MNG_URL + '/rcms-api/1/search')
-            return { response }
-        }catch (e) {
-            console.log(e.message)
-        }
+  data() {
+    return {
+      searchInput: {
+        subject: '',
+        inst_ymdhi: {
+          from: '',
+          to: '',
+        },
+        ext_col_01: '',
+        ext_col_02: '',
+        ext_col_03: []
+      },
+      searchResult: {},
     }
+  },
+  mounted() {
+    this.search();
+  },  
+  methods: {
+  // エンドポイントへのリクエストを行い、取得結果をsearchResultに格納
+    search() {
+      // 自分の環境で設定したエンドポイントのURLに置き換えてください
+      this.$axios.get("https://sample-support-kuroco.a.kuroco.app/rcms-api/14/content", {
+        params: {
+          filter: this.buildFilterQuery()
+        }
+      }).then(response => {
+        this.searchResult = response.data || {};
+      }).catch(({ response }) => {
+        this.searchResult = !(response instanceof Object) || !Array.isArray(response.data.errors)
+          ? { errors: ['Unexpected error'] }
+          : response.data;
+      });
+    },
+    // filterクエリの生成
+    buildFilterQuery() {
+      const filterQuery = Object.entries(this.searchInput).reduce((queries, [col, value]) => {
+        switch (col) {
+          // 日付: 範囲指定
+          case 'inst_ymdhi':
+            if (value.from !== '') {
+              queries.push(`${col} >= "${value.from}"`);
+            }
+            if (value.to !== '') {
+              queries.push(`${col} <= "${value.to}"`);
+            }
+            break;
+          // テキスト: 部分一致
+          case 'subject':
+          case 'ext_col_01':
+            if (value !== '') {
+              queries.push(`${col} contains "${value}"`);
+            }
+            break;
+          // 選択(select): 完全一致
+          case 'ext_col_02':
+            if (value !== '') {
+              queries.push(`${col} = "${value}"`);
+            }
+            break;
+          // 複数選択(checkbox): 部分一致
+          case 'ext_col_03':
+            if (value.length > 0) {
+              queries.push('(' + value.map(v => `${col} contains "${v}"`).join(' OR ') + ')');
+            }
+            break;
+          default:
+            break;
+        }
+        return queries;
+      }, []).join(' AND ');
+
+      return filterQuery;
+    }
+  }
 }
 </script>
+
+<style scoped>
+.search-form {
+  border: 1px solid;
+  padding: 10px;
+}
+.search-form label {
+  display: block;
+  float: left;
+  width: 100px;
+}
+.search-result {
+  width: 100%;
+  margin-top: 20px;
+}
+.search-result table, th, td {
+  border: solid 1px;
+  border-collapse: collapse;
+}
+.search-result th, td {
+  padding: 5px;
+}
+.search-result table {
+  width: 100%;
+}
+</style>

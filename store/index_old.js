@@ -21,15 +21,15 @@ export const mutations = {
 
 export const actions = {
     async login ({ commit }, payload) {
-        await this.$axios.$post(process.env.BASE_URL + '/rcms-api/1/login', payload)
-        const profileRes = await this.$axios.$get(process.env.BASE_URL + '/rcms-api/1/profile')
+        await this.$axios.$post(process.env.ROOT_MNG_URL + '/rcms-api/8/login', payload)
+        
+        const profileRes = await this.$axios.$get(process.env.ROOT_MNG_URL + '/rcms-api/8/profile')
         commit('setProfile', { profile: profileRes.data })
-
         commit('updateLocalStorage', { authenticated: true })
     },
     async logout ({ commit }) {
         try {
-            await this.$axios.$post(process.env.BASE_URL + '/rcms-api/1/logout')
+            await this.$axios.$post(process.env.BASE_URL + '/rcms-api/8/logout')
         } catch {
             /** No Process */
             /** エラーが返却されてきた場合は、結果的にログアウトできているものとみなし、これを無視します。 */

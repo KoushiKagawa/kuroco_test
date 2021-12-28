@@ -13,7 +13,6 @@
         <button type="submit">
             ログイン
         </button>
-
         <div>
             <nuxt-link to="/news">
                 ニュース一覧ページへ
@@ -27,7 +26,7 @@ export default {
     data () {
         return {
             email: '',
-           password: '',
+            password: '',
 
             loginStatus: null,
             resultMessage: null
@@ -48,9 +47,6 @@ export default {
     methods: {
         async login () {
             try {
-                await request
-                this.$store.commit('setProfile', { profile: {} }) // ダミーのオブジェクトをstore.state.profileに適用
-
                 const payload = {
                     email: this.email,
                     password: this.password

@@ -29,6 +29,7 @@
 <script>
 /* eslint-disable camelcase */
 /* eslint-disable nuxt/no-this-in-fetch-data */
+
 async function getAllComments (topics_id) {
     const { list } = await this.$axios.$get(
         process.env.BASE_URL + '/rcms-api/1/comments',
@@ -45,23 +46,11 @@ async function getAllComments (topics_id) {
 export default {
     async asyncData ({ $axios, params }) {
         try {
-
             const response = await $axios.$get(
                 //process.env.BASE_URL + '/rcms-api/4/newsdetail/1'   // 実装簡易化のために、記事IDを"1"で仮指定しています
-                process.env.BASE_URL + '/rcms-api/1/sampledetail/' + `${params.slug}`
+                process.env.ROOT_MNG_URL + '/rcms-api/1/sampledetail/' + `${params.slug}`
             )
-            console.log(response);
-            return { 
-                response, 
-                comments: await getAllComments.call(
-                    {
-                        $axios
-                    }, 
-                    response.details.topics_id
-                )
-            }
-            //return { response }
-
+            return { response, comments: await getAllComments.call({ $axios }, response.details.topics_id) }
         } catch (e) {
             console.log(e.message)
         }
@@ -85,7 +74,8 @@ export default {
             this.inputComment = ''
         },
         async deleteComment (commentId) {
-            await this.$axios.$post(`/rcms-api/1/comment/${commentId}`, {})
+            await this.$axios.$post(`/rcms-api/1/comment/delete/${commentId}`, {
+            })
             this.comments = await getAllComments.call(this, this.response.details.topics_id)
             this.inputComment = ''
         }
