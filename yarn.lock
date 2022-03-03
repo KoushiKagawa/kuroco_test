@@ -6869,6 +6869,11 @@
   dependencies:
     "p-locate" "^4.1.0"
 
+"locutus@^2.0.16":
+  "integrity" "sha512-pGfl6Hb/1mXLzrX5kl5lH7gz25ey0vwQssZp8Qo2CEF59di6KrAgdFm+0pW8ghLnvNzzJGj5tlWhhv2QbK3jeQ=="
+  "resolved" "https://registry.npmjs.org/locutus/-/locutus-2.0.16.tgz"
+  "version" "2.0.16"
+
 "lodash._reinterpolate@^3.0.0":
   "integrity" "sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0="
   "resolved" "https://registry.npmjs.org/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz"

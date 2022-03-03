@@ -22,6 +22,7 @@
     "@nuxtjs/recaptcha": "^1.0.4",
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
+    "locutus": "^2.0.16",
     "nuxt": "^2.0.0",
     "skyway-js": "^4.4.1",
     "vue": "^2.6.12"
